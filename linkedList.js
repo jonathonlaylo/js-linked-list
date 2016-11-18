@@ -47,7 +47,20 @@ function linkedListGenerator(){
   }
 
   function remove(num){
+    var previousNode = get(num - 1);
+    var curNode = get(num);
+    var nextNode = curNode.next;
+    // var removeNode = null;
+    // var previousNode = get(index - 1);
+    // var i = 0;
 
+    if (head === null || curNode === false){
+      return false;
+    } else if (num === 0){
+      head = head.next;
+    } else {
+      previousNode.next = nextNode;
+    }
   }
 
   function get(num){
