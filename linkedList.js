@@ -28,7 +28,22 @@ function linkedListGenerator(){
   }
 
   function add(newValue){
-
+    var tail = getTail();
+    //tail could be null
+    var newNode = {
+      value : newValue,
+      next : null
+    };
+    if (head === null) {
+      head = newNode;
+      tail = head;
+      return head;
+    } else {
+      //set tails next to newNode
+      tail.next = newNode;
+    }
+    tail = newNode;
+    return tail;
   }
 
   function remove(num){
