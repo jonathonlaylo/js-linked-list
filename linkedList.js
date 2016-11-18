@@ -51,7 +51,18 @@ function linkedListGenerator(){
   }
 
   function get(num){
+    var curNode = head;
+    var i = 0;
 
+    while (i < num){
+      curNode = curNode.next;
+      if (curNode === null){
+        curNode = false;
+        break;
+      }
+      i++;
+    }
+    return curNode;
   }
 
   function insert(value, index){
