@@ -10,4 +10,32 @@ function linkedListGenerator(){
     return head;
   }
 
+  function getTail(){
+
+  }
+
+  function add(newValue){
+
+  }
+
+  function remove(num){
+
+  }
+
+  function get(num){
+
+  }
+
+  function insert(value, index){
+
+  }
+
+  return{
+    getHead : getHead,
+    getTail : getTail,
+    add : add,
+    remove : remove,
+    get : get,
+    insert : insert
+  };
 }
