@@ -79,7 +79,20 @@ function linkedListGenerator(){
   }
 
   function insert(value, index){
+    var previousNode = get(index - 1);
+    var curNode = get(index);
+    var newNode = {
+      value : value,
+      next : curNode
+    };
 
+    if (index === 0){
+      head = newNode;
+    } else if(curNode === false || index < 0) {
+      return false;
+    } else {
+      previousNode.next = newNode;
+    }
   }
 
   return{
