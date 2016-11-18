@@ -11,7 +11,20 @@ function linkedListGenerator(){
   }
 
   function getTail(){
-
+    var curNode = head;
+    // curNode could be null
+    while (curNode !== null){
+      //curNode is a node, its not null
+      //check if curNode has next node
+      if (curNode.next !== null){
+      //if it does, set curNode to next, beacuse its not tail
+        curNode = curNode.next;
+      } else {
+        //else return curNode, beacuse its a tail
+        return curNode;
+      }
+    }
+    return curNode;
   }
 
   function add(newValue){
