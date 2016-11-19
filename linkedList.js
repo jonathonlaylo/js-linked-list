@@ -69,7 +69,7 @@ function linkedListGenerator(){
 
     while (i < num){
       curNode = curNode.next;
-      if (curNode === null){
+      if (curNode === null) {
         curNode = false;
         break;
       }
@@ -95,7 +95,7 @@ function linkedListGenerator(){
     }
   }
 
-  return{
+  return {
     getHead : getHead,
     getTail : getTail,
     add : add,
