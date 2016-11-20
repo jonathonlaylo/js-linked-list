@@ -12,15 +12,10 @@ function linkedListGenerator(){
 
   function getTail(){
     var curNode = head;
-    // curNode could be null
     while (curNode !== null){
-      //curNode is a node, its not null
-      //check if curNode has next node
       if (curNode.next !== null){
-      //if it does, set curNode to next, beacuse its not tail
         curNode = curNode.next;
       } else {
-        //else return curNode, beacuse its a tail
         return curNode;
       }
     }
@@ -29,7 +24,6 @@ function linkedListGenerator(){
 
   function add(newValue){
     var tail = getTail();
-    //tail could be null
     var newNode = {
       value : newValue,
       next : null
@@ -39,7 +33,6 @@ function linkedListGenerator(){
       tail = head;
       return head;
     } else {
-      //set tails next to newNode
       tail.next = newNode;
     }
     tail = newNode;
@@ -50,9 +43,6 @@ function linkedListGenerator(){
     var previousNode = get(num - 1);
     var curNode = get(num);
     var nextNode = curNode.next;
-    // var removeNode = null;
-    // var previousNode = get(index - 1);
-    // var i = 0;
 
     if (head === null || curNode === false){
       return false;
